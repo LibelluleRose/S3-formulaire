@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Formulaire</title>
+
+</head>
+<body>
+
+<form method="get">
+    <h1>Formulaire de paiement</h1>
+    <h2>Informations de contact</h2>
+    <div class="flex">
+        <fieldset>
+            <div><label>Nom :</label><input type="text" name="nom"></div>
+            <div><label>Courriel :</label><input type="text" name="courriel"></div>
+
+            <div><label>Province :</label>
+                <select name="province">
+                    <option value="qc">Québec</option>
+                    <option value="on">Ontario</option>
+                    <option value="nb">Nouveau-Brunswick</option>
+                    <option value="bc">Colombie-Britannique</option>
+                    <option value="autre">Autre</option>
+                </select></div>
+
+        </fieldset>
+    </div>
+
+    <h2>Informations de paiement</h2>
+    <div class="flex">
+        <fieldset>
+            <label>Type de paiement :</label>
+            <label>Visa</label><input type="radio" name="paiement" value="Visa">
+            <label>MasterCard</label><input type="radio" name="paiement" value="MasterCard">
+            <label>American Express</label><input type="radio" name="paiement" value="American Express">
+            <div class="flex"><label>Numéro :</label><input type="text" name="numero_carte"></div>
+        </fieldset>
+    </div>
+
+    <h2>Informations de livraison</h2>
+    <div class="flex">
+        <fieldset>
+
+            <div><input type="checkbox" name="sign_requise"><label>Signature requise</label></div>
+            <div><input type="checkbox" name="livraison_meme_adresse">
+                <label>Livrer à la même adresse que l'adresse de paiement</label>
+            </div>
+
+        </fieldset>
+    </div>
+    <div class="bouton">
+        <input class="button" type="button" value="Envoyer" onclick="onsubmit();">
+        <input class="button" type="reset" value="Annuler">
+    </div>
+</form>
+
+</body>
+</html>
